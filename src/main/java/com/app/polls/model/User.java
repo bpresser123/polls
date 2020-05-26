@@ -1,9 +1,7 @@
 package com.app.polls.model;
 
 import com.app.polls.model.audit.DateAudit;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
