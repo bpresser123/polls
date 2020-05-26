@@ -1,7 +1,9 @@
 package com.app.polls.model;
 
 import com.app.polls.model.audit.DateAudit;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -51,4 +53,14 @@ public class User extends DateAudit {
           inverseJoinColumns = @JoinColumn(name = "role_id"))
   private Set<Role> roles = new HashSet<>();
 
+  public User() {
+
+  }
+
+  public User(String name, String username, String email, String password) {
+    this.name = name;
+    this.username = username;
+    this.email = email;
+    this.password = password;
+  }
 }
